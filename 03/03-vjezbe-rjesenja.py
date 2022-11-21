@@ -29,7 +29,8 @@ async def func2():
 
 async def func3(x):
     assert isinstance(x, list) and all([isinstance(d,dict) for d in x])
-    assert all([d.get("korisnik") and d.get("id") for d in x] )
+    assert all([d.get("korisnik") for d in x]) 
+    assert all([True if d.get("id",None) is not None else False for d in x ]) 
     await asyncio.sleep(0.05)
     return [(d.get("korisnik"),d.get("id"), len(d.get("korisnik"))) for d in x]
 

@@ -1,4 +1,3 @@
-
 ---
 description: Distribuirani sustavi - 03
 author: Srđan Daniel Simić
